@@ -2,11 +2,9 @@
 <html>
 <head>
   <title>Plug</title>
-  <meta name="description" content="Lightweight OSX player for The Hype Machine.">
+  <meta name="description" content="OS X player for The Hype Machine">
   <meta name="viewport" content="initial-scale=1">
-  <link rel="stylesheet" href="/plug.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-  <script src="/plug.js"></script>
+  <link rel="stylesheet" href="./plug.css">
   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -16,31 +14,32 @@
 
     ga('create', 'UA-42119014-4', 'plugformac.com');
     ga('send', 'pageview');
-
   </script>
 </head>
 <body>
-  <div id="wrapper">
-    <header>
-      <div class="row">
-        <hgroup id="logo">
-          <div id="logo-icon"></div>
-          <h1>plug</h1>
-        </hgroup>
-      </div>
-      <p>Lightweight OSX player for <a href="http://www.hypem.com">The Hype Machine</a>.</p>
-      <a id="download-button" href="http://www.plugformac.com/files/Plug-latest.dmg" target="_blank" download>
-        beta 0.10
-        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18.006px" height="22.003px" viewBox="0 0 18.006 22.003" enable-background="new 0 0 18.006 22.003" xml:space="preserve">
-          <polygon points="11.998,12.004 11.998,0 5.998,0 5.998,12.004 0,12.004 9.003,22.003 18.006,12.004"/>
-        </svg>
-      </a>
-      <div id="twitter">
-        <a href="http://www.twitter.com/plugformac">@plugformac</a>
-      </div>
-    </header>
-    <div id="app">
+  <div id="content">
+    <div id="wrapper">
+      <header>
+        <img id="top-logo" class="logo" src="./images/logo@2x.png" />
+
+        <div id="title">
+          <div id="title-text">plug two</div>
+          <div id="beta-text" class="tag">Beta</div>
+        </div>
+        <div id="subtitle">OS X player for <a href="http://hypem.com">The Hype Machine</a></div>
+
+        <a id="download-button" href="/updates/plug2/Plug-latest.dmg" target="_blank" download>
+          <img id="download-logo" class="logo" src="./images/logo@2x.png" />
+          <div id="download-text">Download</div>
+        </a>
+      </header>
+
+      <img id="app" src="./images/app@2x.png" />
     </div>
   </div>
+  <footer>
+    <a id="issues-link" class="tag bordered" href="https://github.com/PlugForMac/Plug2Issues/issues">Issues?</a>
+    <a id="twitter-link" class="tag bordered" href="http://www.twitter.com/plugformac">Twitter</a>
+  </footer>
 </body>
 </html>
