@@ -49,11 +49,15 @@ gulp.task('publish', function() {
   };
 
   var gzip = gulp.src(['./*.html', './*.css', './*.css.map']).pipe(awspublish.gzip());
-  var plain = gulp.src(['./images/*.png']);
+  var plain = gulp.src(['./*.png']);
 
   return merge(gzip, plain)
+
+    // add subdirectory
     .pipe(rename(function (path) {
+      console.log(path);
       path.dirname += '/plug2sitetest';
+      console.log(path);
     }))
 
     // publisher will add Content-Length, Content-Type and headers specified above
