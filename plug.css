@@ -1,0 +1,299 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  background-color: #262e3b;
+  color: #95989d;
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight:300;
+  text-align: center;
+  line-height: 1.3em;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  background: #262e3b; /* Old browsers */
+  background: -moz-linear-gradient(top, #262e3b 0%, #2e394c 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#262e3b), color-stop(100%,#2e394c)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #262e3b 0%,#2e394c 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #262e3b 0%,#2e394c 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #262e3b 0%,#2e394c 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #262e3b 0%,#2e394c 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#262e3b', endColorstr='#2e394c',GradientType=0 ); /* IE6-9 */
+}
+a {
+  color: #95989d;
+  border-bottom: 1px solid #95989d;
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#wrapper {
+  width: 204px;
+  margin: 0 auto;
+}
+header {
+  margin: 15px 0;
+}
+header h1 {
+  color: white;
+  font-weight: lighter;
+  font-size: 32px;
+  line-height: 1em;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+header p {
+  font-size: 17px;
+  line-height: 1.3em;
+  margin: 11px 0;
+}
+header p a {
+  -webkit-transition: color 0.25s, border-color 0.25s;
+  -moz-transition: color 0.25s, border-color 0.25s;
+  -o-transition: color 0.25s, border-color 0.25s;
+  transition: color 0.25s, border-color 0.25s;
+}
+header p a:hover {
+  color: #83c441;
+  border-color: #83c441;
+}
+#logo-icon {
+  background-image: url("/images/logo.png");
+  background-size: 31px 27px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5px;
+  margin-top: 7px;
+  width: 31px;
+  height: 27px;
+}
+#download-button {
+  color: #e23a3b;
+  border: 2px solid #e23a3b;
+  border-radius: 50px;
+  font-size: 30px;
+  line-height: 1em;
+  background-color: transparent;
+  padding: 4px 16px;
+  display: none;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+#download-button polygon {
+  fill: #E23A3B;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+}
+#download-button:hover {
+  color: white;
+  background-color: #e23a3b;
+}
+#download-button:hover polygon {
+  fill: white;
+}
+#download-button:active {
+  color: #262e3b;
+  background-color: white;
+  border-color: white;
+}
+#download-button:active polygon {
+  fill: #262e3b;
+}
+#app {
+  background-image: url("/images/app-full.png");
+  background-size: 204px 402px;
+  width: 204px;
+  height: 402px;
+  box-shadow: 0 0px 15px rgba(0,0,0,0.5);
+}
+#twitter a {
+  color: #e23a3b;
+  border: 0;
+  font-family: "HelveticaNeue", "Helvetica Neue", "HelveticaNeueRoman", "HelveticaNeue-Roman", "Helvetica Neue Roman", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+  font-weight:400;
+  font-size: 12px;
+  line-height: 1.3em;
+  -webkit-transition: color 0.25s;
+  -moz-transition: color 0.25s;
+  -o-transition: color 0.25s;
+  transition: color 0.25s;
+}
+#twitter a:hover {
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  a {
+    border-width: 2px;
+  }
+  #wrapper {
+    width: 408px;
+  }
+  header {
+    margin: 30px 0;
+  }
+  header h1 {
+    font-size: 64px;
+  }
+  header p {
+    font-size: 34px;
+    margin: 22px 0;
+  }
+  #logo-icon {
+    background-image: url("/images/logo.png");
+    background-size: 62px 54px;
+    margin-right: 10px;
+    margin-top: 14px;
+    width: 62px;
+    height: 54px;
+  }
+  #app {
+    background-image: url("/images/app-full.png");
+    background-size: 408px 804px;
+    width: 408px;
+    height: 804px;
+    box-shadow: 0 0px 30px rgba(0,0,0,0.5);
+  }
+  #twitter a {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.25), 
+screen and (min-width: 768px) and (min-resolution: 120dpi) { 
+  #logo-icon {
+    background-image: url("/images/logo@2x.png");
+  }
+  #app {
+    background-image: url("/images/app-full@2x.png");
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #wrapper {
+    width: 870px;
+  }
+  header {
+    width: 390px;
+    text-align: left;
+    float: right;
+    margin: 0;
+    opacity: 0;
+  }
+  .animation header {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: fadein;
+    -webkit-animation-delay: 0.7s;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 1s;
+    -moz-animation-name: fadein;
+    -moz-animation-delay: 0.7s;
+    -moz-animation-fill-mode: both;
+  }
+  #logo-icon {
+    width: 62px;
+    margin-right: 15px;
+    margin-top: 16px;
+  }
+  header h1 {
+    font-size: 64px;
+  }
+  header p {
+    font-size: 34px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+  header a {
+    padding-bottom: 4px;
+    border-width: 2px;
+  }
+  header #logo {
+    float: left;
+  }
+  #download-button {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 18px;
+  }
+  #app {
+    float: left;
+    width: 408px;
+    height: 684px;
+    background-image: url("/images/app-short.png");
+    background-size: 408px 684px;
+    opacity: 0;
+  }
+  .animation #app {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-name: slidein;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 1s;
+    -moz-animation-name: slidein;
+    -moz-animation-fill-mode: both;
+  }
+  #twitter a {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 1.25), 
+screen and (min-width: 1025px) and (min-resolution: 120dpi) { 
+  #app {
+    width: 407px;
+    height: 683px;
+    background-image: url("/images/app-short@2x.png");
+    background-size: 407px 683px;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: -20px;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+@-moz-keyframes slidein {
+  from {
+    margin-left: -20px;
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

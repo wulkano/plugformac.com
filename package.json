@@ -1,0 +1,8 @@
+{
+  "name": "plugformac.com",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-s3": "~0.2.0-alpha.2"
+  }
+}
