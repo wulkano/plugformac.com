@@ -6,17 +6,51 @@ var sourcemaps       = require('gulp-sourcemaps');
 var webserver        = require('gulp-webserver');
 var awspublish       = require('gulp-awspublish');
 var awspublishRouter = require("gulp-awspublish-router");
+var browserify       = require('browserify');
+var source           = require('vinyl-source-stream');
+var buffer           = require('vinyl-buffer');
+var uglify           = require('gulp-uglify');
+var gutil            = require('gulp-util');
+var rename           = require('gulp-rename');
+var addsrc           = require('gulp-add-src');
+var concat           = require('gulp-concat');
 
 gulp.task('watch', function() {
-  gulp.watch('./**/*.scss', ['sass']);
+  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('./js/**/*.js', ['js']);
 });
 
 gulp.task('sass', function () {
   gulp.src('./sass/*.scss')
+    .pipe(rename({suffix: '.min'}))
     .pipe(sourcemaps.init())
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./public/'));
+});
+
+gulp.task('js', function() {
+  var bundler = browserify({
+    entries: ['./js/app.js'],
+    debug: true,
+  });
+
+  var bundle = function() {
+    return bundler
+      .bundle()
+      .on('error', gutil.log)
+      .pipe(source('app.js'))
+      .pipe(buffer())
+      .pipe(addsrc('./js/vendor/*.js'))  
+      .pipe(concat('plug.min.js'))
+      .pipe(sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        .pipe(uglify())
+      .pipe(sourcemaps.write('./'))
+      .pipe(gulp.dest('./public/'));
+  };
+
+  return bundle();
 });
 
 gulp.task('webserver', function() {
@@ -62,5 +96,5 @@ gulp.task('publish', function() {
     .pipe(awspublish.reporter())
 });
 
-gulp.task('build', ['sass']);
-gulp.task('default', ['sass', 'watch', 'webserver']);
+gulp.task('build', ['sass', 'js']);
+gulp.task('default', ['sass', 'js', 'watch', 'webserver']);
