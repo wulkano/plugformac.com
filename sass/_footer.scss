@@ -6,11 +6,11 @@ footer {
   height: 200px;
   background: linear-gradient($bottom-gradient-color-transparent, $bottom-gradient-color);
 
-  @media (min-width: $screen-mobile-width) {
+  @media (min-width: $center-content-width) {
     display: block;
   }
 
-  @media (min-width: $screen-mobile-width) and (min-height: $screen-gradient-height) {
+  @media (min-width: $center-content-width) and (min-height: $show-gradient-height) {
     background: none;
   }
 
@@ -23,9 +23,14 @@ footer {
   }
 
   #left-buttons, #right-buttons {
+    display: none;
     position: absolute;
     bottom: 0;
     margin: 20px;
+
+    @media (min-width: $show-footer-buttons-width) {
+      display: block;
+    }
   }
 
   #left-buttons {

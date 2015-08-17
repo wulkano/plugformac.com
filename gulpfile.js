@@ -14,6 +14,7 @@ var gutil            = require('gulp-util');
 var rename           = require('gulp-rename');
 var addsrc           = require('gulp-add-src');
 var concat           = require('gulp-concat');
+var merge            = require('merge-stream');
 
 gulp.task('watch', function() {
   gulp.watch('./sass/**/*.scss', ['sass']);
@@ -65,8 +66,6 @@ gulp.task('webserver', function() {
 gulp.task('publish', function() {
   var credentials = JSON.parse(fs.readFileSync('aws-credentials.json', 'utf8'));
 
-  // create a new publisher using S3 options
-  // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property
   var publisher = awspublish.create({
     params: {
       Bucket: 'www.plugformac.com'
@@ -75,25 +74,25 @@ gulp.task('publish', function() {
     secretAccessKey: credentials.secretAccessKey
   });
 
-  // define custom headers
   var headers = {
-    'Cache-Control': 'max-age=315360000, no-transform, public'
+    'Cache-Control': 'max-age=300, no-transform, public'
   };
 
-  gulp.src("**/*", { cwd: "./public/" })
-    .pipe(awspublishRouter({
-      cache: {
-        // cache for 5 minutes by default 
-        cacheTime: 300
-      },
+  var siteRoot = 'plug2site';
 
-      // todo
-      routes: {
-      }
-    }))
-    .pipe(publisher.publish(headers))
-    .pipe(publisher.cache())
-    .pipe(awspublish.reporter())
+  var gzipped = gulp.src(['./*.js', './*.css', './*.html', './*.map'], { cwd: "./public/" })
+    .pipe(rename({dirname: siteRoot}))
+    .pipe(awspublish.gzip());
+
+  var images = gulp.src('./images/*', { cwd: "./public/" })
+    .pipe(rename({dirname: siteRoot + '/images'}));
+
+  var other = gulp.src(['./*', '!./*.js', '!./*.css', '!./*.html', '!./*.map'], { cwd: "./public/" })
+    .pipe(rename({dirname: siteRoot}));
+
+  return merge(gzipped, images, other)
+    .pipe(publisher.publish())
+    .pipe(awspublish.reporter());
 });
 
 gulp.task('build', ['sass', 'js']);

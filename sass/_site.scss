@@ -1,7 +1,8 @@
 // Screen sizes
-$screen-mobile-width: 500px;
-$screen-gradient-height: 876px;
-$screen-flex-height: 976px;
+$center-content-width: 395px;
+$show-footer-buttons-width: 720px;
+$show-gradient-height: 876px;
+$center-content-height: 976px;
 
 // Animations
 $transition-duration: 0.15s;
@@ -30,7 +31,7 @@ body {
 
   background: linear-gradient($top-gradient-color, $bottom-gradient-color);
 
-  @media (min-width: $screen-mobile-width) {
+  @media (min-width: $center-content-width) {
     text-align: center;
   }
 }
