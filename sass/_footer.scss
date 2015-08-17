@@ -1,0 +1,42 @@
+footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient($bottom-gradient-color-transparent, $bottom-gradient-color);
+
+  @media (min-width: $screen-mobile-width) {
+    display: block;
+  }
+
+  @media (min-width: $screen-mobile-width) and (min-height: $screen-gradient-height) {
+    background: none;
+  }
+
+  .tag {
+    &:hover {
+      color: $transparent-white-hover;
+
+      border-color: $transparent-white-hover;
+    }
+  }
+
+  #left-buttons, #right-buttons {
+    position: absolute;
+    bottom: 0;
+    margin: 20px;
+  }
+
+  #left-buttons {
+    left: 0;
+  }
+
+  #right-buttons {
+    right: 0;
+  }
+
+  #twitter-link {
+    margin-left: 5px;
+  }
+}

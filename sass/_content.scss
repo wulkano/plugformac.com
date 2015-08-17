@@ -1,0 +1,140 @@
+#content {
+  margin-top: 43px;
+
+  @media (min-width: $screen-mobile-width) {
+    margin-top: 100px;
+  }
+
+  @media (min-width: $screen-mobile-width) and (min-height: $screen-flex-height) {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 0;
+    height: 100%;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+
+#wrapper {
+  margin-left: 40px;
+  width: 360px;
+
+  @media (min-width: $screen-mobile-width) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+header {
+  margin-bottom: 44px;
+
+  @media (min-width: $screen-mobile-width) {
+    margin-bottom: 60px;
+  }
+}
+
+#top-logo {
+  margin-bottom: -3px;
+
+  @media (min-width: $screen-mobile-width) {
+    display: none;
+  }
+}
+
+#title {
+  margin-bottom: 6px;
+
+  @media (min-width: $screen-mobile-width) {
+    font-size: 8px;
+  }
+
+  #title-text {
+    font-size: 34px;
+
+    display: inline-block;
+    vertical-align: top;
+
+    @media (min-width: $screen-mobile-width) {
+      font-size: 38px;
+    }
+  }
+
+  #beta-text {
+    font-size: 11px;
+    font-weight: bold;
+    color: rgb(235, 92, 114);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    background-color: $transparent-white;
+    border-radius: 2px;
+    padding: 3px 6px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 14px;
+    margin-left: 6px;
+
+    @media (min-width: $screen-mobile-width) {
+      margin-top: 18px; 
+    }
+  }
+}
+
+#subtitle {
+  font-family: $helvetica-neue; 
+  font-size: 14px;
+
+  @media (min-width: $screen-mobile-width) {
+    font-size: 16px;
+
+    margin-bottom: 30px;
+  }
+}
+
+#download-button {
+  display: none;
+  text-decoration: none;
+  border: 1px solid $transparent-white;
+  border-radius: 4px;
+  padding: 0 10px;
+
+  @media (min-width: $screen-mobile-width) {
+    display: inline-block; 
+  }
+
+  &:hover {
+    border-color: $transparent-white-hover;
+  }
+
+  #download-logo {
+    margin-top: 10px;
+    margin-right: 6px;
+  }
+
+  #download-text {
+    font-size: 14px;
+    line-height: 47px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+.mobile #download-button {
+  display: none !important;
+}
+
+#app {
+  opacity: 0;
+  width: 378px;
+  height: 586px;
+  margin: -9px;
+  transition: opacity 1.2s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+  }
+}
