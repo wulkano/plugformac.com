@@ -1,13 +1,11 @@
-var gulp       = require('gulp');
-var watch      = require('gulp-watch');
-var sass       = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var webserver  = require('gulp-webserver');
-var awspublish = require('gulp-awspublish');
-var merge      = require('merge-stream');
-var rename     = require("gulp-rename");
-var fs         = require('fs');
-
+var fs               = require('fs');
+var gulp             = require('gulp');
+var watch            = require('gulp-watch');
+var sass             = require('gulp-sass');
+var sourcemaps       = require('gulp-sourcemaps');
+var webserver        = require('gulp-webserver');
+var awspublish       = require('gulp-awspublish');
+var awspublishRouter = require("gulp-awspublish-router");
 
 gulp.task('watch', function() {
   gulp.watch('./**/*.scss', ['sass']);
@@ -18,7 +16,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./public/'));
 });
 
 gulp.task('webserver', function() {
@@ -48,27 +46,20 @@ gulp.task('publish', function() {
     'Cache-Control': 'max-age=315360000, no-transform, public'
   };
 
-  var gzip = gulp.src(['./*.html', './*.css', './*.css.map']).pipe(awspublish.gzip());
-  var plain = gulp.src(['./*.png']);
+  gulp.src("**/*", { cwd: "./public/" })
+    .pipe(awspublishRouter({
+      cache: {
+        // cache for 5 minutes by default 
+        cacheTime: 300
+      },
 
-  return merge(gzip, plain)
-
-    // add subdirectory
-    .pipe(rename(function (path) {
-      console.log(path);
-      path.dirname += '/plug2sitetest';
-      console.log(path);
+      // todo
+      routes: {
+      }
     }))
-
-    // publisher will add Content-Length, Content-Type and headers specified above
-    // If not specified it will set x-amz-acl to public-read by default
     .pipe(publisher.publish(headers))
-
-    // create a cache file to speed up consecutive uploads
     .pipe(publisher.cache())
-
-     // print upload updates to console
-    .pipe(awspublish.reporter());
+    .pipe(awspublish.reporter())
 });
 
 gulp.task('build', ['sass']);

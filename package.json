@@ -4,6 +4,7 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-awspublish": "^2.0.2",
+    "gulp-awspublish-router": "^0.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",

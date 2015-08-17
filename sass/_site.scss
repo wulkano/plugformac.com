@@ -111,7 +111,7 @@ header {
     margin-left: 6px;
 
     @media (min-width: $screen-mobile-width) {
-      margin-top: 18px;
+      margin-top: 18px; 
     }
   }
 }
@@ -135,7 +135,7 @@ header {
   padding: 0 10px;
 
   @media (min-width: $screen-mobile-width) {
-    display: inline-block;
+    display: inline-block; 
   }
 
   &:hover {
@@ -157,6 +157,10 @@ header {
     display: inline-block;
     vertical-align: top;
   }
+}
+
+.mobile #download-button {
+  display: none !important;
 }
 
 #app {
