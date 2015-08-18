@@ -132,9 +132,11 @@ header {
   width: 378px;
   height: 586px;
   margin: -9px;
-  transition: opacity 1.2s ease-in-out;
+  margin-top: 11px;
+  transition: opacity 1.2s ease-in-out, margin-top 1.2s ease-in-out;
 
   &.fade-in {
     opacity: 1;
+    margin-top: -9px;
   }
 }
