@@ -4,7 +4,7 @@ var shouldHide = false;
 
 // create a SpringSystem and a Spring with a bouncy config.
 var springSystem = new rebound.SpringSystem();
-var spring = springSystem.createSpring(35, 5);
+var spring = springSystem.createSpring(30, 5);
 
 // Add a listener to the spring. Every time the physics
 // solver updates the Spring's value onSpringUpdate will
@@ -12,11 +12,10 @@ var spring = springSystem.createSpring(35, 5);
 spring.addListener({
   onSpringUpdate: function(spring) {
     var val = spring.getCurrentValue();
-    val = rebound.MathUtil.mapValueInRange(val, 0, 1, 1, 0.5);
-    scale(modalContent, val);
+    mappedVal = rebound.MathUtil.mapValueInRange(val, 0, 1, 1, 0.8);
+    scale(modalContent, mappedVal);
 
-    console.log(val)
-    if (val <= 0.5 && shouldHide === true && modal.className === "show") {
+    if (val >= 1 && shouldHide === true && modal.className === "show") {
       modal.className = ""
       shouldHide = false
     }
