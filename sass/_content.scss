@@ -127,13 +127,17 @@ header {
   display: none !important;
 }
 
+
 #app {
+  $appTransitionTime: 0.8s;
+  $appTransitionCurve: ease-out;
+
   opacity: 0;
   width: 378px;
   height: 586px;
   margin: -9px;
   margin-top: 11px;
-  transition: opacity 1.2s ease-in-out, margin-top 1.2s ease-in-out;
+  transition: opacity $appTransitionTime $appTransitionCurve, margin-top $appTransitionTime $appTransitionCurve;
 
   &.fade-in {
     opacity: 1;
