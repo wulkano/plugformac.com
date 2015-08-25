@@ -39,7 +39,10 @@ gulp.task('js', function() {
   var bundle = function() {
     return bundler
       .bundle()
-      .on('error', gutil.log)
+      .on('error', function(err) {
+        console.log(err.toString());
+        this.emit("end");
+      })
       .pipe(source('app.js'))
       .pipe(buffer())
       .pipe(addsrc('./js/vendor/*.js'))  
