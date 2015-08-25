@@ -139,6 +139,10 @@ header {
   margin-top: 11px;
   transition: opacity $appTransitionTime $appTransitionCurve, margin-top $appTransitionTime $appTransitionCurve;
 
+  @media (min-width: $center-content-width) and (min-height: $show-gradient-height) {
+    margin-top: -9px;
+  }
+
   &.fade-in {
     opacity: 1;
     margin-top: -9px;
