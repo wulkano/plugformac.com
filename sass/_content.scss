@@ -26,7 +26,10 @@
 }
 
 header {
+  $time: 0.8s;
+  $curve: ease-out;
   margin-bottom: 44px;
+  transition: opacity $time $curve;
 
   @media (min-width: $center-content-width) {
     margin-bottom: 60px;
@@ -129,22 +132,28 @@ header {
 
 
 #app {
-  $appTransitionTime: 0.8s;
-  $appTransitionCurve: ease-out;
+  $time: 0.8s;
+  $curve: ease-out;
 
-  opacity: 0;
   width: 378px;
   height: 586px;
   margin: -9px;
   margin-top: 11px;
-  transition: opacity $appTransitionTime $appTransitionCurve, margin-top $appTransitionTime $appTransitionCurve;
+  transition: opacity $time $curve, margin-top $time $curve;
 
   @media (min-width: $center-content-width) and (min-height: $show-gradient-height) {
     margin-top: -9px;
   }
 
   &.fade-in {
-    opacity: 1;
     margin-top: -9px;
   }
+}
+
+.start-hidden {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
 }

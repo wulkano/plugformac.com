@@ -4,10 +4,6 @@ function isMobile() {
   return check;
 }
 
-module.exports = {
-  init: function() {
-    if (isMobile()) {
-      document.body.className = "mobile";
-    }
-  }
-};
+if (isMobile()) {
+  document.body.className = "mobile";
+}

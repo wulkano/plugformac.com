@@ -13,12 +13,8 @@ function preventClickthrough(event) {
   event.stopPropagation();
 }
 
-module.exports = {
-  init: function() {
-    modal = document.getElementById("modal");
-    modalContent = document.getElementById("modal-content");
-    document.getElementById("help-out-button").addEventListener("click", showModal);
-    document.getElementById("modal-container").addEventListener("click", hideModal);
-    modalContent.addEventListener("click", preventClickthrough);
-  }
-};
+modal = document.getElementById("modal");
+modalContent = document.getElementById("modal-content");
+document.getElementById("help-out-button").addEventListener("click", showModal);
+document.getElementById("modal-container").addEventListener("click", hideModal);
+modalContent.addEventListener("click", preventClickthrough);
