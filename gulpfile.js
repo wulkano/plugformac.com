@@ -81,7 +81,7 @@ gulp.task('publish', function() {
     'Cache-Control': 'max-age=300, no-transform, public'
   };
 
-  var siteRoot = 'plug2site';
+  var siteRoot = '';
 
   var gzipped = gulp.src(['./*.js', './*.css', './*.html', './*.map'], { cwd: "./public/" })
     .pipe(rename({dirname: siteRoot}))
