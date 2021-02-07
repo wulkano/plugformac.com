@@ -1,4 +1,3 @@
-import Image from "next/image";
 import AppleLogo from "../components/AppleLogo";
 import FooterLink from "../components/FooterLink";
 
@@ -6,7 +5,7 @@ const HomePage = () => {
   return (
     <div className="flex w-full min-h-screen justify-center flex-col px-4 sm:px-10 py-10 font-light">
       <div className="flex mb-6">
-        <Image
+        <img
           alt="Plug logo – a pink heart filled with a music equalizer"
           src="/images/logo.png"
           width="40px"
@@ -35,7 +34,7 @@ const HomePage = () => {
         <p className="ml-3">Get it on the App Store</p>
       </a>
       <div className="-ml-6 sm:-ml-12">
-        <Image
+        <img
           alt="Plug application UI showing two lists of songs from Hypem; popular and favourite"
           src="/images/app.png"
           width="600px"
