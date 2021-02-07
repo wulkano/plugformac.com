@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 import AppleLogo from "../components/AppleLogo";
@@ -14,7 +15,7 @@ const HomePage = () => {
     >
       <div>
         <div className="flex mb-6">
-          <img
+          <Image
             className="flex-initial w-11 h-11"
             alt="Plug logo – a pink heart filled with a music equalizer"
             src="/images/logo.png"
@@ -45,7 +46,7 @@ const HomePage = () => {
         </a>
       </div>
       <motion.div variants={slideIn} className="-ml-6 sm:-ml-12">
-        <img
+        <Image
           alt="Plug application UI showing two lists of songs from Hypem; popular and favourite"
           src="/images/app.png"
           width="600px"
