@@ -1,18 +1,25 @@
-<img src="./public/favicon.ico" alt="Plug for Mac logo" align="left">
+<h1>
+plugformac.com site <img src="./public/favicon.ico" alt="Plug for Mac logo" align="left">
+</h1>
 
-# [plugformac.com](https://plugformac.com) site
-
-> Repository for the plugformac.com site ♥
+> Repository for the [plugformac.com](https://plugformac.com) site
 
 ## Installing / Getting started
 
 Here's what you need to fire this site up locally
 
 ```shell
-gh repo clone wulkano/plugformac.com
-cd plugformac.com && yarn install
-yarn build && yarn start
+$ gh repo clone wulkano/plugformac.com
+$ cd plugformac.com && yarn install
 ```
+
+This clones the repo and installs dependencies. After that, run
+
+```shell
+$ yarn dev
+```
+
+To start the Next.js development server.
 
 ## Developing
 
