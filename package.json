@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && mv out/* .",
+    "build": "next build && next export && rm -rf public && mv out public",
     "start": "next start"
   },
   "dependencies": {
