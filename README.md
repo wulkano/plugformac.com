@@ -1,65 +1,34 @@
-<img src="./public/favicon.ico" alt="Logo of the project" align="right">
+<img src="./public/favicon.ico" alt="Plug for Mac logo" align="left">
 
-# Repo for plugformac.com site
+# [plugformac.com](https://plugformac.com) site
 
-> Discover and listen to music from Hype Machine
+> Repository for the plugformac.com site ♥
 
 ## Installing / Getting started
 
-TODO
-
-<!-- A quick introduction of the minimal setup you need to get a hello world up & running.
+Here's what you need to fire this site up locally
 
 ```shell
-commands here
+gh repo clone wulkano/plugformac.com
+cd plugformac.com && yarn install
+yarn build && yarn start
 ```
-
-Here you should say what actually happens when you execute the code above. -->
 
 ## Developing
 
 ### Built With
 
-TODO
-
-<!-- List main libraries, frameworks used including versions (React, Angular etc...) -->
+The site is built with [Next.js v10](https://nextjs.org/docs) and [Tailwind v2](https://tailwindcss.com/).
 
 ### Prerequisites
 
-TODO
-
-<!-- What is needed to set up the dev environment. For instance, global dependencies or any other tools. include download links. -->
-
-### Setting up Dev
-
-TODO
-
-<!-- Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
-```shell
-git clone https://github.com/your/your-project.git
-cd your-project/
-packagemanager install
-```
-
-And state what happens step-by-step. If there is any virtual environment, local server or database feeder needed, explain here. -->
+- `node` >=v12
+- `yarn` or `npm`
 
 ### Building
 
-TODO
-
-<!-- If your project needs some additional steps for the developer to build the
-project after some code changes, state them here. for example:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed. -->
+It's worth noting that we swap out React for Preact in production builds to save bandwidth.
+See [#8](https://github.com/wulkano/plugformac.com/pull/8) for more info.
 
 ### Deploying / Publishing
 
@@ -68,5 +37,3 @@ Hosted on Vercel via their Github plugin. Just push/merge with master and your c
 ## Licensing
 
 TODO
-
-<!-- State what the license is and how to find the text version of the license. -->
