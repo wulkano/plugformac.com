@@ -6,6 +6,7 @@ const HomePage = () => {
     <div className="flex w-full min-h-screen justify-center flex-col px-4 sm:px-10 py-10 font-light">
       <div className="flex mb-6">
         <img
+          className="flex-initial w-11 h-11"
           alt="Plug logo – a pink heart filled with a music equalizer"
           src="/images/logo.png"
           width="40px"
