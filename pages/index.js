@@ -58,7 +58,7 @@ const HomePage = () => {
         initial="initial"
         animate="animate"
         variants={stagger}
-        className="text-xs tracking-wide flex flex-col sm:flex-row"
+        className="text-xs tracking-wide flex flex-row flex-wrap"
       >
         <FooterLink href="http://www.twitter.com/plugformac">
           Follow on Twitter
@@ -66,7 +66,7 @@ const HomePage = () => {
         <FooterLink href="https://github.com/wulkano/plug">
           Contribute on GitHub
         </FooterLink>
-        <FooterLink href="https://github.com/wulkano/Plug/issues/new">
+        <FooterLink href="https://sindresorhus.com/feedback/?product=Plug">
           Submit feedback
         </FooterLink>
       </motion.div>
