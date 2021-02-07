@@ -1,14 +1,18 @@
 {
   "name": "plugformac.com",
-  "version": "2.0.0",
+  "version": "3.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.4",
     "next": "^10.0.6",
+    "postcss": "^8.2.5",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "tailwindcss": "^2.0.2"
   }
 }

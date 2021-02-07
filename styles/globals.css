@@ -1,0 +1,15 @@
+html {
+  background-color: #e3e9ec;
+}
+
+body {
+  background-image: linear-gradient(180deg, #ef5b68 0%, #e65c7c 100%);
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: white;
+  margin: 0;
+}
+
+.download-button {
+  background-image: linear-gradient(180deg, #ffffff 0%, #e3e9ec 100%);
+}
