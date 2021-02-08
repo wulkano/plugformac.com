@@ -1,3 +1,5 @@
 node_modules
 s3_config.json
 aws-credentials.json
+.next
+.vercel
