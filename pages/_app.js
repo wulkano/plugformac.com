@@ -33,7 +33,7 @@ function PlugRoot({ Component, pageProps }) {
           property="twitter:description"
           content="macOS player for the Hype Machine ❤️"
         />
-        <meta property="twitter:image" content="/images/og-image.png?v=2" />
+        <meta name="twitter:image" content="/images/og-image.png?v=2" />
         <link
           href="/favicon.ico"
           rel="shortcut icon"
