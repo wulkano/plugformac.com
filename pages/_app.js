@@ -23,7 +23,7 @@ function PlugRoot({ Component, pageProps }) {
           property="og:description"
           content="macOS player for the Hype Machine :heart:"
         />
-        <meta property="og:image" content="/images/social-card.jpg" />
+        <meta property="og:image" content="/images/og-image.png" />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
