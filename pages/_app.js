@@ -13,7 +13,7 @@ function PlugRoot({ Component, pageProps }) {
         {/* <!-- Primary Meta Tags --> */}
         <title>Plug for Mac</title>
         <meta name="title" content="Plug for Mac" />
-        <meta name="description" content="macOS player for the Hype Machine :heart:" />
+        <meta name="description" content="macOS player for the Hype Machine ❤️" />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
@@ -21,7 +21,7 @@ function PlugRoot({ Component, pageProps }) {
         <meta property="og:title" content="Plug for Mac" />
         <meta
           property="og:description"
-          content="macOS player for the Hype Machine :heart:"
+          content="macOS player for the Hype Machine ❤️"
         />
         <meta property="og:image" content="/images/og-image.png" />
 
@@ -33,7 +33,7 @@ function PlugRoot({ Component, pageProps }) {
           property="twitter:description"
           content="macOS player for the Hype Machine ❤️"
         />
-        <meta name="twitter:image" content="/images/og-image.png?v=2" />
+        <meta name="twitter:image" content="https://www.plugformac.com/images/og-image.png?v=3" />
         <link
           href="/favicon.ico"
           rel="shortcut icon"
