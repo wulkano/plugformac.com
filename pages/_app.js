@@ -31,9 +31,9 @@ function PlugRoot({ Component, pageProps }) {
         <meta property="twitter:title" content="Plug for Mac" />
         <meta
           property="twitter:description"
-          content="macOS player for the Hype Machine :heart:"
+          content="macOS player for the Hype Machine ❤️"
         />
-        <meta property="twitter:image" content="/images/og-image.png" />
+        <meta property="twitter:image" content="/images/og-image.png?v=2" />
         <link
           href="/favicon.ico"
           rel="shortcut icon"
