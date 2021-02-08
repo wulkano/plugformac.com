@@ -11,7 +11,7 @@ const HomePage = () => {
       initial="initial"
       animate="animate"
       variants={stagger}
-      className="flex w-full min-h-screen justify-center flex-col px-4 sm:px-10 py-10 font-light"
+      className="flex w-full min-h-screen flex-col px-4 sm:px-10 py-10 font-light"
     >
       <div>
         <div className="flex mb-6">
@@ -22,9 +22,9 @@ const HomePage = () => {
             width="40px"
             height="40px"
           />
-          <h1 className="text-4xl ml-2">Plug</h1>
+          <h1 className="text-4xl font-bold ml-2">Plug</h1>
         </div>
-        <p className="mb-10 text-xl text-white text-opacity-70">
+        <p className="mb-10 text-xl text-white text-opacity-70 font-medium">
           Discover and listen to music from{" "}
           <a
             className="underline"
@@ -39,10 +39,10 @@ const HomePage = () => {
           target="_blank"
           rel="nofollow noopener"
           href="https://apps.apple.com/app/plug-for-hype-machine/id1514182074"
-          className="download-button rounded-lg text-black inline-flex px-6 py-4 mr-auto font-normal items-center shadow-md tracking-wide mb-4 cursor-pointer"
+          className="download-button rounded-lg text-black inline-flex px-6 py-4 mr-auto items-center shadow-md tracking-wide mb-4 cursor-pointer"
         >
           <AppleLogo />
-          <p className="ml-3">Get it on the App Store</p>
+          <p className="ml-3 font-medium">Get it on the App Store</p>
         </a>
       </div>
       <motion.div variants={slideIn} className="-ml-6 sm:-ml-12">
