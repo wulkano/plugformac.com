@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import AppleLogo from "../components/AppleLogo";
 import FooterLink from "../components/FooterLink";
 import { stagger, slideIn } from "../lib/animations";
+import PlugLogo from '../public/images/logo.png'
+import PlugAppImage from '../public/images/app.png'
 
 const HomePage = () => {
   return (
@@ -18,9 +20,9 @@ const HomePage = () => {
           <Image
             className="flex-initial w-11 h-11"
             alt="Plug logo – a pink heart filled with a music equalizer"
-            src="/images/logo.png"
-            width="40px"
-            height="40px"
+            src={PlugLogo}
+            width={40}
+            height={40}
           />
           <h1 className="text-4xl font-bold ml-2">Plug</h1>
         </div>
@@ -48,9 +50,9 @@ const HomePage = () => {
       <motion.div variants={slideIn} className="-ml-6 sm:-ml-12">
         <Image
           alt="Plug application UI showing two lists of songs from Hypem; popular and favourite"
-          src="/images/app.png"
-          width="600px"
-          height="565px"
+          src={PlugAppImage}
+          width={600}
+          height={565}
           quality="100"
         />
       </motion.div>

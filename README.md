@@ -32,6 +32,11 @@ The site is built with [Next.js v10](https://nextjs.org/docs) and [Tailwind v2](
 - `node` >=v12
 - `yarn` or `npm`
 
+### Building
+
+We swap out React for Preact in production builds to save bandwidth.
+See [`./next.config.js`](https://github.com/wulkano/plugformac.com/blob/main/next.config.js) for more info.
+
 ### Deploying / Publishing
 
 Hosted on Vercel. Just push/merge with main and your changes are live 🎉
