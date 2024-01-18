@@ -1,5 +1,4 @@
 import Head from "next/head";
-import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
 
 function PlugRoot({ Component, pageProps }) {
