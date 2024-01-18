@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "eslint-config-next": "^14.0.4",
-    "framer-motion": "^3.3.0",
+    "framer-motion": "^10.18.0",
     "next": "^14.0.4",
     "preact": "^10.19.3",
     "react": "^18.2.0",
