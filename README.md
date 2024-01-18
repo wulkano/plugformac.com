@@ -25,12 +25,12 @@ To start the Next.js development server.
 
 ### Built With
 
-The site is built with [Next.js v10](https://nextjs.org/docs) and [Tailwind v2](https://tailwindcss.com/).
+The site is built with [Next.js v14](https://nextjs.org/docs) and [Tailwind v2](https://tailwindcss.com/).
 
 ### Prerequisites
 
-- `node` >=v12
-- `yarn` or `npm`
+- `node` >=v20
+- `yarn`
 
 ### Building
 
